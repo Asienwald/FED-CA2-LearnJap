@@ -1,0 +1,52 @@
+/*Remove all transitions*/
+.notransition{
+	transition: none !important;
+}
+
+/*CSS rules for changing background in pages with content*/
+#content-body{
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-size: 100% 100%;
+}
+
+
+/*CSS for the flipping cards*/
+.flip-card-inner{
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	height: 25vh;
+}
+.flip-card:hover .flip-card-inner{
+	transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  color: black;
+}
+.flip-card-back {
+	transform: rotateY(180deg);
+}
+
+/*Make inner body of table of contents in hiragana.html blue*/
+nav .card-body{
+	background-color: #00f;
+}
+
+/*Media Queries*/
+/*Add transition to sidebar and main content on lg screens*/
+@media screen and (min-width: 992px){
+	#sidebar{
+		transition: margin-left, 0.6s;
+		z-index: 10;
+	}
+	#main-content{
+		transition: all 0.5s linear;
+	}
+}

@@ -1,0 +1,336 @@
+/*CSS Styling for custom slideshow*/
+#main-slideshow{
+	overflow: hidden;
+}
+#slideshow-controls{
+	position: absolute;
+	top: 50%;
+}
+#slideshow-contents{
+	width: 500%;
+	transition: transform 1s;
+}
+.slideshow-item{
+	width: 100%;
+}
+#slideshow-indicators{
+	position: absolute;
+	bottom: 10%;
+}
+
+/*This is the styling for the slideshow images*/
+.img-container{
+	position: relative;
+}
+.img-container p{
+	position: absolute;
+	padding: 10px;
+	color: #FFF;
+	font-size: 30px;
+	width: 500px;
+	font-size: 1.5rem;
+}
+#slide1 p{
+	background-color: rgb(255, 94, 94, 0.8);
+	bottom: 10%;
+	left: 5%;
+}
+#slide2 p{
+	background-color: rgb(81, 110, 252, 0.8);
+}
+#slide2 #slide2p1{
+	bottom: 5%;
+	left: 5%;
+}
+#slide2 #slide2p2{
+	right: 5%;
+	top: 5%;
+}
+#slide3 p{
+	background-color: rgb(68, 255, 150, 0.8);
+	top: 5%;
+	left: 5%;
+}
+
+
+
+/* FOR SPLIT IMG PANEL WITH EXTANDABLE SIDES*/
+/* GENERAL STYLING */
+.split-img-panel{
+	height: 200px;
+}
+.split-img-panel:after{
+	content: "YEET";
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    width: 100%;
+}
+.split-img-panel p, span{
+	transition: font-size 1s;
+}
+.split-img-panel img{
+	width: 100%;
+	height: auto;
+}
+.expandable{
+	transition: width 1s;
+}
+.small-text-contents span{
+	font-size: 60px;
+	color: red;
+}
+.small-text-contents p{
+	font-size: 40px;
+	color: blue;
+	white-space: nowrap;
+}
+.split-img-panel a{
+	background-color: #1B67FF;
+	color: #fff;
+	border-radius: 10px;
+	padding: 0 2%;
+}
+.split-img-panel a:hover{
+	background-color: #f00;
+}
+
+
+/*GENERAL STYLING FOR THE GREY BOXES WITH GET STARTED*/
+.get-started-box{
+	width: 100%;
+	z-index: 0;
+	position: absolute;
+	font-size: 1.2em;
+}
+.left-text{
+	float: left;
+}
+.right-text-2{
+	float: right;
+}
+
+.get-started-box:hover ~ .lpa-box{
+	width: 50%;
+}
+
+.get-started-box-contents{
+	position: absolute;
+	background-color: rgb(133, 145, 138, 0.9);
+	top: 5vh;
+	color: #FFF;
+	padding: 10px;
+	font-size: 1vw;
+}
+.get-started-box-contents a{
+	font-size: 1vw;
+	text-decoration: none;
+}
+.get-started-box-contents p{
+	margin-bottom: 2px;
+}
+.get-started-box:hover > .get-started-box-contents p{
+	font-size: 1.8vw;
+}
+
+.left-text-contents{
+	left: 5%;
+}
+.right-text-contents-2{
+	right: 10%;
+}
+
+/*FOR PORTION WITH LEARN, PRAC, APPLY*/
+.lpa-box{
+	height: 0;
+	width: 60%;
+	position: absolute;
+	font-size: 0.7em;
+}
+.lpa-box-contents{
+	position: absolute;
+	top: 1vh;
+/*	padding: 10px;*/
+}
+.lpa-box-contents p{
+	margin: 0;
+}
+.lpa-box:hover{
+	width: 80%;
+}
+.lpa-box:hover > .lpa-box-contents p{
+	font-size: 320%;
+}
+.lpa-box:hover > .lpa-box-contents span{
+	font-size: 320%;
+}
+
+.right-text{
+	float: right;
+	border-bottom: 200px solid rgb(107, 250, 226, 0.7);
+	border-left: 200px solid transparent;
+	right: 0;
+}
+.left-text-2{
+	float: left;
+	border-bottom: 200px solid rgb(255, 122, 203, 0.7);
+	border-right: 200px solid transparent;
+	left: 0;
+}
+#right-text-3{
+	border-bottom: 200px solid rgb(171, 154, 255, 0.7);
+}
+
+.right-text-contents{
+	left: 20%;
+}
+.left-text-contents-2{
+	right: 20%;
+}
+
+.split-panel-img{
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	overflow: hidden;
+}
+
+
+/*FOR SIGNINUP TAB*/
+#signinup-container{
+	background-image: linear-gradient(to top, #6096FD, #6f86d6);
+}
+#small-signinup-container{
+	background-image: linear-gradient(to top, #667eea, #764ba2);
+}
+.nav-tabs a{
+	background-color: #667eea !important;
+	border: none;
+	font-size: 1.4vw;
+	transition: font-size 1s;
+}
+.nav-tabs a:hover{
+	font-size: 1.8vw;
+}
+.nav-tabs .active{
+	background-color: #764ba2 !important;
+	border: none;
+}
+
+/*Media queries*/
+@media screen and (max-width: 576px) {
+	.img-container > p{
+		width: 30vw;
+		font-size: 2vw;
+	}
+
+
+	.split-img-panel{
+		height: 100px;
+	}
+	.right-text{
+		border-bottom: 100px solid rgb(107, 250, 226, 0.7);
+		border-left: 100px solid transparent;
+	}
+	.left-text-2{
+		border-bottom: 100px solid rgb(255, 122, 203, 0.7);
+		border-right: 100px solid transparent;
+	}
+	#right-text-3{
+		border-bottom: 100px solid rgb(171, 154, 255, 0.7);
+	}
+	.split-panel-img{
+		height: 100px;
+	}
+
+	.get-started-box-contents{
+		padding: 5px;
+		top: 3vh;
+	}
+	.get-started-box-contents p{
+		font-size: 2vw;
+	}
+	.get-started-box:hover > .get-started-box-contents p{
+		font-size: 3vw;
+	}
+	.lpa-box-contents p{
+		font-size: 3vw;
+	}
+	.lpa-box-contents span{
+		font-size: 5vw;
+	}
+	.lpa-box:hover > .lpa-box-contents p{
+		font-size: 230%;
+	}
+	.lpa-box:hover > .lpa-box-contents span{
+		font-size: 230%;
+	}
+	.get-started-box-contents a{
+		font-size: 2vw;
+	}
+
+	.nav-tabs a{
+		font-size: 2.4vw;
+	}
+	.nav-tabs a:hover{
+		font-size: 3vw;
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+	.img-container > p{
+		width: 30vw;
+		font-size: 2vw;
+	}
+
+
+	.split-img-panel{
+		height: 150px;
+	}
+	.right-text{
+		border-bottom: 150px solid rgb(107, 250, 226, 0.7);
+		border-left: 150px solid transparent;
+	}
+	.left-text-2{
+		border-bottom: 150px solid rgb(255, 122, 203, 0.7);
+		border-right: 150px solid transparent;
+	}
+	#right-text-3{
+		border-bottom: 150px solid rgb(171, 154, 255, 0.7);
+	}
+	.split-panel-img{
+		height: 150px;
+	}
+	.get-started-box-contents{
+		top: 3vh;
+	}
+	.get-started-box-contents p{
+		font-size: 1.4vw;
+	}
+	.get-started-box:hover > .get-started-box-contents p{
+		font-size: 2.5vw;
+	}
+	.lpa-box-contents p{
+		font-size: 4vw;
+	}
+	.lpa-box-contents span{
+		font-size: 5vw;
+	}
+	.get-started-box-contents a{
+		font-size: 1.5vw;
+	}
+
+	.nav-tabs a{
+		font-size: 1.6vw;
+	}
+	.nav-tabs a:hover{
+		font-size: 2vw;
+	}
+}
+
+@media screen and (min-width: 992px){
+
+}

@@ -1,0 +1,115 @@
+/*Make scroll behaviour smooth*/
+html{
+	scroll-behavior: smooth;
+}
+
+/*Add bg image for header*/
+header .header-banner{
+	background-image: url("../images/background/cherry-blossom.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100vw;
+}
+
+/*CSS for nav links in header*/
+header .btn-link{
+	text-decoration: none !important;
+	color: #fff;
+	font-size: 1.2rem;
+}
+header .btn-link:hover{
+	color: #f00;
+}
+
+/*Show dropdown when you hover on link*/
+header .dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+/*Set linear colour of nav bar*/
+header .navbar{
+	background: linear-gradient(to right, #9B7CFF, transparent 150%) !important;
+}
+
+/*Global css for selectable icons in website*/
+.icon{
+	width: 2.5vw;
+	filter: brightness(0) invert(1);
+}
+.selectable-icon:hover{
+	filter: brightness(1);
+}
+
+
+/*FOR DEBUGGING*/
+.red{
+	border: 2px solid red;
+}
+
+/*Custom coloured classes used throughout the website*/
+.text-cyan{
+	color: #DBFFF6;
+}
+.border-cyan{
+	border: 1px solid #DBFFF6;
+}
+.bg-linear-purple{
+	background-image: linear-gradient(to bottom right, #6096FD, #FAA7B8);
+}
+.bg-purple{
+	background-color: #CA6EFF;
+}
+.bg-pastel-blue{
+	background-color: rgba(154, 239, 244, 0.5);
+}
+.bg-linear-blue{
+	background-image: linear-gradient(to left, #005AA7, #FFFDE4);
+}
+
+/*Set font size of jumbotron h1*/
+.jumbotron h1{
+	font-size: 3em;
+}
+
+/*Add blank space*/
+.spacer{
+	height: 15vh;
+}
+
+
+/*Put on selectable items*/
+.selectable{
+	cursor: pointer;
+}
+
+/*Media queries sm, lg and xl*/
+@media screen and (max-width: 576px) {
+	.icon{
+		width: 6vw;
+	}
+	#content-body{
+		background-size: auto;
+	}
+	.jumbotron h1{
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+	.icon{
+		width: 4vw;
+	}
+	#content-body{
+		background-size: auto;
+	}
+	.jumbotron h1{
+		font-size: 4rem;
+	}
+}
+
+@media screen and (min-width: 992px){
+	.jumbotron h1{
+		font-size: 6rem;
+	}
+}
+

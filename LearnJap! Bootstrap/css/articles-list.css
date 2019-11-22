@@ -1,0 +1,9 @@
+
+/*Control the hovering article collapsing card*/
+.card-header, .card-header:hover{
+	text-decoration: none;
+}
+/*Change title to red when hovered*/
+.card:hover > .card-header > h3{
+	color: #f00;
+}

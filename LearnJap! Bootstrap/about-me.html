@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LearnJap!</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/content.css">
+
+ 
+	<!-- FOR FAVICON -->
+	<link rel="apple-touch-icon" sizes="57x57" href="images/system/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/system/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/system/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/system/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/system/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/system/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/system/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/system/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/system/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/system/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/system/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/system/favicon/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/system/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+
+<body id="content-body">
+
+	<!-- My Header -->
+	<header>
+		<div class="header-banner container-fluid text-left">
+			<!-- Site Logo -->
+			<div>
+				<img src="images/system/gui/logo.jpg" alt="LearnJap Logo">
+			</div>
+			<p class="my-0 text-primary">Your portal to easy Japanese Learning.</p>
+		</div>
+		<nav class="navbar navbar-expand-lg text-white">
+			<!-- Home Button -->
+			<a class="navbar-brand icon selectable-icon" href="index.html">
+				<i class="fa fa-home fa-lg"></i>
+			</a>
+			<!-- Search Bar -->
+			<form class="form-inline">
+				<input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
+			</form>
+			<!-- Collapsible Nav Button -->
+			<button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Nav Links -->
+			<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					
+					<li class="dropdown nav-item px-5">
+					  <button type="button" class="btn btn-link dropdown-toggle">
+					  	<i class="fa fa-newspaper-o fa-lg"></i>
+					    About
+					  </button>
+					  <div class="dropdown-menu">
+					    <a class="dropdown-item text-primary" href="about-me.html">About Me</a>
+					    <a class="dropdown-item text-primary" href="articles-list.html">Articles</a>
+					    <a class="dropdown-item text-danger" href="#contact-us-form">Contact Me</a>
+					  </div>
+					</li>
+					<li class="dropdown nav-item px-5">
+					  <button type="button" class="btn btn-link dropdown-toggle">
+					  	<i class="fa fa-language fa-lg"></i>
+					    Language
+					  </button>
+					  <div class="dropdown-menu">
+					    <a class="dropdown-item text-danger" href="language.html">All Languages</a>
+					    <a class="dropdown-item text-primary" href="hiragana.html">Hiragana</a>
+					    <a class="dropdown-item text-primary" href="hiragana.html">Katakana</a>
+					    <a class="dropdown-item text-primary" href="hiragana.html">Kanji</a>
+					    <a class="dropdown-item text-primary" href="hiragana.html">Grammar</a>
+					    <a class="dropdown-item text-primary" href="hiragana.html">Vocabulary</a>
+					  </div>
+					</li>
+					<!-- Sign in or open sign up modal here -->
+					<li class="nav-item dropdown px-5" id="sign-in-dropdown">
+						<button class="btn btn-link dropdown-toggle" type="button" href="#" id="loginDropDownBtn" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-user-circle-o fa-lg"></i>
+							Account
+						</button>
+						<div class="dropdown-menu dropdown-menu-right sign-dropdown" aria-labelledby="loginDropDownBtn" id="dropdown-yeet">
+							<form id="signin-form">
+								<div id="signin-error-msg" class="dropdown-item">
+									
+								</div>
+								<div class="form-group">
+									<label class="dropdown-header" for="email-input">Email:</label>
+									<input class="dropdown-item" type="text" name="uid" id="email-input" placeholder="Enter Email">
+								</div>
+								<div class="dropdown-divider"></div>
+								<div class="form-group">
+									<label class="dropdown-header" for="pwd-input">Password:</label>
+									<input class="dropdown-item" type="password" name="pwd" id="pwd-input" placeholder="Enter Password">
+								</div>
+
+								<div class="dropdown-divider"></div>
+								<button type="submit" class="btn text-danger dropdown-item">Sign In</button>
+								<div class="dropdown-divider"></div>
+								
+							</form>
+							
+							<div class="dropdown-divider"></div>
+							<div>
+								<p class="dropdown-item">No Account? <a href="#" id="open-signup" class="text-primary" data-toggle="modal" data-target="#signup-modal">Sign Up!</a></p>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>  
+		</nav>
+
+
+		<!-- Sign Up Modal & Form -->
+		<div class="modal fade" id="signup-modal" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-lg">
+				  <!-- Modal content-->
+			  <form id="signup-form">
+					  <div class="modal-content">
+					    <div class="modal-header">
+					      <h4 class="modal-title">Sign Up New Account</h4>
+					      <button type="button" class="close" data-dismiss="modal">&times;</button>
+					    </div>
+					    <div class="modal-body">
+					      <div>
+					      	<p>Enjoy benefits like tracking your progress, saving articles and much more!</p>
+					      </div>
+					      <div id="signup-error-msg">
+					      	
+					      </div>
+					      <div>
+				      		<div class="form-group">
+				      			<label for="email"><strong>Email: <span class="text-danger">*</span></strong></label>
+				      			<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+				      		</div>
+				      		<div class="form-group">
+				      			<label for="uid"><strong>Username: <span class="text-danger">*</span></strong></label>
+				      			<input type="text" class="form-control" id="uid" name="uid" placeholder="Username">
+				      		</div>
+				      		<div class="form-group">
+				      			<label for="pwd1"><strong>Password: <span class="text-danger">*</span></strong></label>
+				      			<input type="password" class="form-control" id="pwd1" name="pwd1" placeholder="Password">
+				      		</div>
+				      		<div class="form-group">
+				      			<label for="pwd2"><strong>Re-Enter Password: <span class="text-danger">*</span></strong></label>
+				      			<input type="password" class="form-control" id="pwd2" name="pwd2" placeholder="Re-Enter Password">
+				      		</div>
+
+				      		<div class="form-group">
+				      			<p class="text-center">Or</p>
+				      			<button type="button" class="btn btn-block btn-social btn-google text-danger border-danger">
+								  <i class="fa fa-google"></i> Sign in with Google
+								</button>
+				      		</div>
+
+					      </div>
+					    </div>
+					    <div class="modal-footer">
+					      <button type="button" id="signup-btn" class="btn btn-primary">Sign Up!</button>
+					    </div>
+					  </div>
+				</form>
+			  
+			</div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<div class="container-fluid">
+		<div class="row">
+			
+			<div class="col-lg-8 col-sm-10 mx-auto">
+				<div class="spacer"></div>
+				<div class="jumbotron my-5">
+
+					<h3 class="display-4 text-primary text-center"><strong>About Me</strong></h3>
+					<hr>
+					<br>
+					<article>
+						<div class="card p-4">
+							<div class="row">
+								<!-- Pic of me -->
+								<div class="col-lg-4 card-img-bottom border-right" data-toggle="tooltip" title="Click Me to Enlarge!" data-placement="top">
+									<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="A pic of me during my Japan Trip this year!">
+										<img class="img-thumbnail" src="images/me/me-in-japan.jpg">
+										<figcaption class="text-center">Pic of Me</figcaption>
+									</a>
+								</div>
+
+								<!-- Descrip of me -->
+								<div class="col-lg-8">
+									<p>Hello! My name is Kar Wei, the creator of this website.</p>
+									<p>This website was made to teach others about the Japanese language and culture and also mainly for me to revise my Japanese</p>
+									<p>I take Japanese as a third language and have been practicing for around a year now</p>
+									<p>Though my Kanji isn't that good yet, I look forward to learning with you!</p>
+									<br>
+									<p>I'm currently at the end of E-3, and moving on to I-1 soon</p>
+									<p>As you know, the Japanese uses different grammar as compared to English and since the entire language changes based on how polite you are, it is optimal for us to start practicing whenever we can.</p>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+						<h3 class="display-4 text-primary text-center"><strong>What made me pick up Japanese?</strong></h3> <hr>
+
+						<div class="card p-4">
+							<div class="row">
+								<!-- More info -->
+								<div class="col-lg-8 border-right">
+									<p>I'm an avid reader and watcher of manga & anime.</p>
+									<p>English translated Manga is hella expensive ($15++) as compared to Japanese Manga ($7++) hence I picked up the language in order to read raw manga and save some bucks</p>
+									<p>Below is a few of my favourite Anime/Manga titles</p>
+								</div>
+								<div class="col-lg-4 card-img-bottom text-center" data-toggle="tooltip" title="Click Me to Enlarge!" data-placement="top">
+									<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="One of my favourite animes, K-On!">
+										<img class="img-thumbnail" src="images/anime/k-on2.jpg">
+										<figcaption class="text-center">My all-time favourite, K-On!</figcaption>
+									</a>
+								</div>
+							</div>
+
+							<hr>
+
+							<div class="row">
+								<!-- Carousel using Bootstrap -->
+								<div id="main-carousel" class="carousel slide col-12" data-ride="carousel">
+
+								  <!-- Indicators -->
+								  <ul class="carousel-indicators">
+								    <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+								    <li data-target="#main-carousel" data-slide-to="1"></li>
+								    <li data-target="#main-carousel" data-slide-to="2"></li>
+								  </ul>
+
+								  <div class="carousel-inner" data-toggle="tooltip" title="Click Me to Enlarge!" data-placement="top">
+								    <div class="carousel-item active">
+										<div class="row">
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="K-on!">
+													<img class="img-thumbnail" src="images/anime/k-on.jpg">
+												</a>
+											</div>
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="Akame Ga Kill!">
+													<img class="img-thumbnail" src="images/anime/akame-ga-kill.jpg">
+												</a>
+											</div>
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="The Promised Neverland">
+													<img class="img-thumbnail" src="images/anime/neverland.jpg">
+												</a>
+											</div>
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="Bloom Into You">
+													<img class="img-thumbnail" src="images/anime/bloom-into-you.jpg">
+												</a>
+											</div>
+										</div>
+								    </div>
+								    <div class="carousel-item">
+								   		<div class="row">
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="Kakegurui">
+													<img class="img-thumbnail" src="images/anime/kakegurui.jpg">
+												</a>
+											</div>
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="Flip Flappers">
+													<img class="img-thumbnail" src="images/anime/flip-flappers.jpg">
+												</a>
+											</div>
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="Monthly Girls' Nozaki-Kun">
+													<img class="img-thumbnail" src="images/anime/gekkan-shoujo.jpg">
+												</a>
+											</div>
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="Noragami">
+													<img class="img-thumbnail" src="images/anime/noragami.jpg">
+												</a>
+											</div>
+										</div>
+								    </div>
+								    <div class="carousel-item">
+								      	<div class="row">
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="RE:Creators">
+													<img class="img-thumbnail" src="images/anime/re-creators.jpg">
+												</a>
+											</div>
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="The Pet Girl of Sakurasou">
+													<img class="img-thumbnail" src="images/anime/sakurasou.jpg">
+												</a>
+											</div>
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="Violet Evergarden">
+													<img class="img-thumbnail" src="images/anime/violet-evergarden.jpg">
+												</a>
+											</div>
+											<div class="col-3">
+												<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="Wotakoi: Love is Hard for Otaku">
+													<img class="img-thumbnail" src="images/anime/wotakoi.jpg">
+												</a>
+											</div>
+										</div>
+								    </div>
+								  </div>
+								  
+								  <!-- Left right arrows -->
+								  <a class="carousel-control-prev" href="#main-carousel" data-slide="prev">
+								    <span class="carousel-control-prev-icon bg-dark"></span>
+								  </a>
+								  <a class="carousel-control-next" href="#main-carousel" data-slide="next">
+								    <span class="carousel-control-next-icon bg-dark"></span>
+								  </a>
+								</div>
+
+							</div>
+						</div>
+						<hr>
+
+						<div class="card p-4">
+							<div class="row">
+								<div class="col-lg-4 card-img-bottom border-right">
+									<div>
+										<div>
+											<!-- Twitter Plugin -->
+											<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/D4DJ?src=hash&amp;ref_src=twsrc%5Etfw">#D4DJ</a> あみた、、LOVE、、、 <a href="https://t.co/FQq1KEP9FO">pic.twitter.com/FQq1KEP9FO</a></p>&mdash; 愛美 (@aimi_sound) <a href="https://twitter.com/aimi_sound/status/1153276636717993985?ref_src=twsrc%5Etfw">July 22, 2019</a></blockquote>
+											<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+											<figcaption class="text-center">Voice Actors Aimin & Amita</figcaption>
+
+										</div>
+										<hr>
+										<div data-toggle="tooltip" title="Click Me to Enlarge!" data-placement="top">
+											<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="My Samick Greg Bennet Floyd Rose Electric Guitar">
+												<img class="img-thumbnail" src="images/me/guitar.jpg">
+												<figcaption class="text-center">My Guitar</figcaption>
+											</a>
+										</div>
+									</div>
+									
+								</div>
+
+								<div class="col-lg-8">
+									<p>Being a fan of several voice actors, learning Japanese allowed me to read their tweets & possibly converse with them <em>(hopefully)</em></p>
+									<p>I'm also a huge fan of J-Rock, which spurred me on to take up the Electric Guitar in my free time</p>
+									<p>I have been playing for a little over a year now</p>
+									<p>Some of my favourite artists & bands includes Aimer, Riko Azuna, ZAQ, Egoist, Sumika, Frederic, RAS and much more</p>
+
+									<div class="text-center" data-toggle="tooltip" title="Click Me to Enlarge!" data-placement="top">
+
+										<a class="selectable" data-toggle="modal" data-target="#pic-modal" data-descrip="Raise A Suilen, an all-girls band">
+											<img class="img-thumbnail" src="images/anime/ras.jpg">
+											<figcaption class="text-center">Raise A Suilen</figcaption>
+										</a>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						
+						
+					</article>
+
+					<!-- Modal that shows the pictures on click -->
+					<div class="modal fade" id="pic-modal" role="dialog">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									
+								</div>
+								<div class="modal-body" id="modal-content">
+									<figure class="text-center">
+										<img src="" class="img-thumbnail" alt="Yui">
+										<figcaption>Img Descrip</figcaption>
+									</figure>
+
+								
+								</div>
+		
+								<div class="modal-footer">
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Footer -->
+	<footer class="container-fluid text-white bg-linear-purple">
+		<div class="row row-eq-height">
+			<!-- Contact Form -->
+			<div class="col-lg-4 p-3">
+				<div class=" bg-info p-3 rounded h-100" id="contact-us-form">
+					<div>
+						<h3 class="display-5">
+							<i class="fa fa-file fa-lg"></i>
+							Contact Me
+						</h3>
+					</div>
+					<hr class="bg-white">
+					<form id="contact-form">
+						<div class="d-flex flex-column justify-content-around">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control" placeholder="Name">
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<input type="text" name="subject" class="form-control" placeholder="Subject">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="message" placeholder="Type your message here.." rows="5"></textarea>
+							</div>
+							<div id="error-msg">
+								
+							</div>
+							<div class="form-group text-center">
+								<button type="button" class="btn btn-danger" id="contact-btn">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-8 p-3">
+				<!-- Section of footer with goal and sitemap -->
+				<div class="bg-info p-3 rounded h-100">
+					<div class="row">
+						<div class="col-lg-12">
+							<h3 class="display-5">
+								<i class="fa fa-bullseye fa-lg"></i>
+								Our Goal
+							</h3>
+							<hr class="bg-white">
+							<div>
+								<p>
+									LearnJap! is a website built to make learning the Japanese language much more accessible and convenient.
+									We aim to educate the masses on Japanese culture and provides constant updates on news and events happening in Japan.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<!-- Site Map Bootstrap Table -->
+						<div class="col-lg-7">
+							<h3 class="display-5">
+								<i class="fa fa-map-o fa-lg"></i>
+								Site Map
+							</h3>
+							<hr class="bg-white">
+							<div>
+								<table class="table table-light table-striped">
+								    <thead class="text-dark">
+								      <tr>
+								        <th><a href="about-me.html">About</a></th>
+								        <th><a href="language.html">Language</a></th>
+								        <th></th>
+								      </tr>
+								    </thead>
+								    <tbody>
+								      <tr>
+								        <td><a href="about-me.html">About Me</a></td>
+								        <td><a href="hiragana.html">Hiragana</a></td>
+								        <td><a href="hiragana.html">Grammar</a></td>
+								      </tr>
+								      <tr>
+								        <td><a href="articles-list.html">Articles</a></td>
+								        <td><a href="hiragana.html">Katakana</a></td>
+								        <td><a href="hiragana.html">Vocabulary</a></td>
+								      </tr>
+								      <tr>
+								      	<td><a href="#contact-us-form">Contact Us</a></td>
+								      	<td><a href="hiragana.html">Kanji</a></td>
+								      	<td></td>
+								      </tr>
+								  
+								    </tbody>
+								  </table>
+							</div>
+							
+						</div>
+						<div class="col-lg-5">
+							<h3 class="display-5">
+								<i class="fa fa-info-circle fa-lg"></i>
+								More Info
+							</h3>
+							<hr class="bg-white">
+							<div>
+								<div>
+									<p class="small text-dark">
+										All Photos in this website is for educational purposes only & belongs to their respective owners <br>
+										All Nav Icons from <a class="text-cyan" href="https://fontawesome.com/" target="_blank">Font Awesome</a> <br>
+										See their <a class="text-cyan" href="https://fontawesome.com/license/free" target="_blank">License</a>
+									</p>
+								</div>
+								<div class="d-flex flex-row justify-content-around">
+									<button class="btn btn-outline-primary text-cyan border-cyan">Privacy Policy</button>
+									<button class="btn btn-outline-primary text-cyan border-cyan">Terms of Use</button>
+								</div>
+								<div class="d-flex flex-row justify-content-center my-3">
+									<a class="mx-3" href="https://www.facebook.com/" target="_blank">
+										<i class="fa fa-facebook-square fa-3x icon selectable-icon"></i>
+									</a>
+									
+									<a class="mx-3" href="https://www.instagram.com/?hl=en" target="_blank">
+										<i class="fa fa-instagram fa-3x icon selectable-icon"></i>
+									</a>
+									
+									<a class="mx-3" href="https://twitter.com/?lang=en" target="_blank">
+										<i class="fa fa-twitter-square fa-3x icon selectable-icon"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<p>&#x24B8;2019	LearnJap! No Copyright!!!!</p>
+			</div>
+			<div class="col-4">
+				<p>Loh Kar Wei P1904204 DISM 1A/02</p>
+			</div>
+			<div class="col-4">
+				<p>Front-End Web Development CA2 2019</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- My js files	 -->
+	<script type="text/javascript" src="libraries/jquery/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="libraries/bootstrap/popper.min.js"></script>
+	<script type="text/javascript" src="libraries/bootstrap/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/misc.js"></script>
+	<script type="text/javascript" src="js/image.js"></script>
+	<script type="text/javascript" src="js/signup.js"></script>
+	<script type="text/javascript" src="js/contact.js"></script>
+
+</body>
+</html>
