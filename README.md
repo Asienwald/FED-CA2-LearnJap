@@ -1,5 +1,9 @@
-# FED-CA2-LearnJap-
-Front-End Web Development CA2 Website
-
+# FED-LearnJap!
 LearnJap! is a website dedicated to teaching others Japanese.
-Front-end project built with HTML, CSS, Bootstrap and Javascript.
+
+Assignment for Front-End Web Development CA2 2019
+This was pretty much the first website I built to completion.
+
+## Built with
+- Bootstrap CSS Framework
+- JQuery
